@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-	public float speed;
+
+	public float speed = 5;
 	public float maxSpeed;
 	
 	private Rigidbody rigidBody;
-	
 	
     // Start is called before the first frame update
     void Start()
@@ -24,11 +24,14 @@ public class PlayerControl : MonoBehaviour
 	
 	void FixedUpdate()
 	{
+
 		float moveHorizontal = Input.GetAxis("Horizontal");
 		float moveVertical = Input.GetAxis("Vertical");
 		
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 		
+		rigidBody.MovePosition(transform.position + movement * speed * Time.deltaTime);
+		/*
 		if (rigidBody.velocity.magnitude <= maxSpeed)
 		{
 			rigidBody.AddForce(movement * speed);
@@ -37,5 +40,6 @@ public class PlayerControl : MonoBehaviour
 		{
 			rigidBody.velocity = (rigidBody.velocity.normalized * maxSpeed);
 		}
+		*/
 	}
 }
