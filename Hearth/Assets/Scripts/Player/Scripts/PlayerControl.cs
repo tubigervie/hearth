@@ -9,11 +9,14 @@ public class PlayerControl : MonoBehaviour
 	public float maxSpeed;
 	
 	private Rigidbody rigidBody;
+    CameraManager cameraManager;
 	
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        cameraManager = CameraManager.singleton;
+        cameraManager.Init(this);
     }
 
     // Update is called once per frame
@@ -31,7 +34,7 @@ public class PlayerControl : MonoBehaviour
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 		
 		rigidBody.MovePosition(transform.position + movement * speed * Time.deltaTime);
-		/*
+        /*
 		if (rigidBody.velocity.magnitude <= maxSpeed)
 		{
 			rigidBody.AddForce(movement * speed);
@@ -41,5 +44,6 @@ public class PlayerControl : MonoBehaviour
 			rigidBody.velocity = (rigidBody.velocity.normalized * maxSpeed);
 		}
 		*/
+        cameraManager.Tick();
 	}
 }

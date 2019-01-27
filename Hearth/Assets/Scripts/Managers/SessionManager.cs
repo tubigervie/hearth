@@ -11,6 +11,10 @@ public class SessionManager : MonoBehaviour
     public int woodCount = 0;
     public int gemCount = 0;
 
+    [Header("Timers")]
+    public float darknessTimer = 5;
+    public float torchTimer = 30;
+
     private void Awake()
     {
         singleton = this;
