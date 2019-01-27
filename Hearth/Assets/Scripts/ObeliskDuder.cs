@@ -8,6 +8,8 @@ public class ObeliskDuder : MonoBehaviour
 	public float timer;
 	public float maxTime = 180f;
     public float woodTime = 30f;
+    bool lit;
+
 	
     // Start is called before the first frame update
     void Start()

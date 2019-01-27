@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Torch))]
 public class ObeliskFire : MonoBehaviour
 {
     public float minLightRange, maxLightRange, minParticleRate, maxParticleRate;
 
-    public Torch torch; 
+    public ParticleSystem fireParticleSystem;
+    public Light torchLight;
+
+    public ObeliskDuder obeliskStats;
     //todo connect ratio to obelisk time
 
     [Range(0, 1)]
@@ -15,16 +17,26 @@ public class ObeliskFire : MonoBehaviour
 
     void Start()
     {
-        torch = GetComponent<Torch>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        strengthPercentage = torch.litTimeRemaining / torch.maxDuration; 
+        strengthPercentage = obeliskStats.timer / obeliskStats.maxTime; 
 
-        torch.torchLight.range = minLightRange + (maxLightRange - minLightRange) * strengthPercentage;
-        var emission = torch.fireParticleSystem.emission;
+        if(strengthPercentage < 0)
+        {
+            torchLight.enabled = false;
+            fireParticleSystem.Stop();
+        }
+        else
+        {
+            torchLight.enabled = true;
+            fireParticleSystem.Play();
+        }
+
+        torchLight.range = minLightRange + (maxLightRange - minLightRange) * strengthPercentage;
+        var emission = fireParticleSystem.emission;
         emission.rateOverTime = minParticleRate + (maxParticleRate - minParticleRate) * strengthPercentage;  
     }
 }

@@ -23,7 +23,7 @@ public class TestController : MonoBehaviour
         //simulates adding firewood to the obelisk
         if (Input.GetKeyDown(KeyCode.O))
         {
-            obeliskFire.torch.setLit(true);
+            //obeliskFire.torch.setLit(true);
         }
     }
 }

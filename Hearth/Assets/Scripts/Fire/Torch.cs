@@ -56,8 +56,8 @@ public class Torch : MonoBehaviour
             if (litTimeRemaining > 0) litTimeRemaining -= Time.deltaTime; 
             else setLit(false);
 
-            animator.SetBool("QuarterTimeLeft", litTimeRemaining < maxDuration / 4);
-            animator.SetBool("Lit", lit); 
+            //animator.SetBool("QuarterTimeLeft", litTimeRemaining < maxDuration / 4);
+            //animator.SetBool("Lit", lit); 
         }
     }   
 }
