@@ -47,7 +47,7 @@ public class SessionManager : MonoBehaviour
         Vector3 playerPos = PlayerControl.singleton.transform.position;
         for (int i = 0; i < obelisks.Count; ++i)
         {
-            if(Vector3.Distance(playerPos, obelisks[i].transform.position) <= obelisks[i].obFire.torchLight.range * .3f && ObeliskDuder.timer > 0)
+            if(Vector3.Distance(playerPos, obelisks[i].transform.position) <= obelisks[i].obFire.torchLight.range && ObeliskDuder.timer > 0)
             {
                 r = true;
             }

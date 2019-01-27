@@ -8,7 +8,7 @@ public class Torch : MonoBehaviour
     public float maxDuration; 
     public float litTimeRemaining;
 
-    public float minParticleRate, maxParticleRate;
+    public float minParticleRate, maxParticleRate, minLightRange, maxLightRange;
     /// <summary>
     /// If 0, litTimeRemaining is set to MaxDuration
     /// </summary>
@@ -51,6 +51,7 @@ public class Torch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float strengthPercentage = litTimeRemaining / maxDuration;
         litTimeRemaining = Mathf.Clamp(litTimeRemaining, -5, maxDuration); 
         if(lit)
         {
@@ -64,7 +65,7 @@ public class Torch : MonoBehaviour
         {
             SessionManager.singleton.CheckForObelisks();
         }
-
+        torchLight.range = minLightRange + (maxLightRange - minLightRange) * strengthPercentage;
         var emission = fireParticleSystem.emission;
         emission.rateOverTime = minParticleRate + (maxParticleRate - minParticleRate) * (litTimeRemaining / maxDuration);
     }

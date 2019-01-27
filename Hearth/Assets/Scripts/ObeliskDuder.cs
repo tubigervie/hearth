@@ -25,7 +25,7 @@ public class ObeliskDuder : MonoBehaviour
         {
             gemArray[i].SetActive(true);
         }
-        timer = maxTime;
+        timer = maxTime / 3;
         Sesh.obelisks.Add(this);
         obFire = GetComponentInChildren<ObeliskFire>();
         obFire.isOn = true;
@@ -72,7 +72,7 @@ public class ObeliskDuder : MonoBehaviour
             timer += woodAmount * woodTime;
             Debug.Log(timer);
             firstWoodEntered = true;
-            timer = Mathf.Clamp(timer, 0, 180);
+            timer = Mathf.Clamp(timer, 0, maxTime);
             PlayLightTorchSound();
         }
         SessionManager.singleton.woodCount = 0;

@@ -678,6 +678,16 @@ PrefabInstance:
       propertyPath: litTimeRemaining
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 131359928664170005, guid: 1f8313768dd057945a0980ccd8c53b91,
+        type: 3}
+      propertyPath: minLightRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 131359928664170005, guid: 1f8313768dd057945a0980ccd8c53b91,
+        type: 3}
+      propertyPath: maxLightRange
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f8313768dd057945a0980ccd8c53b91, type: 3}
 --- !u!1 &108859439
@@ -905,6 +915,16 @@ PrefabInstance:
       propertyPath: gemInteractArray.Array.data[3]
       value: 
       objectReference: {fileID: 164407549}
+    - target: {fileID: 2016175013551930620, guid: da74e0678f524814ca86201345c2a7ba,
+        type: 3}
+      propertyPath: minLightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016175013551930620, guid: da74e0678f524814ca86201345c2a7ba,
+        type: 3}
+      propertyPath: maxLightRange
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4722184935208357427, guid: da74e0678f524814ca86201345c2a7ba,
         type: 3}
       propertyPath: m_LocalPosition.y
