@@ -59,7 +59,11 @@ public class ObeliskDuder : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (timer > 0 && torch.lit != true)
+        if (timer > 0 && torch.lit != true && firstWoodEntered)
+        {
+            torch.setLit(!torch.lit);
+        }
+        else if(torch.lit != true && !firstWoodEntered && Sesh.woodCount > 0)
         {
             torch.setLit(!torch.lit);
         }
