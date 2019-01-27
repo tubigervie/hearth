@@ -6,12 +6,18 @@ public class miniObeliskDuders : ObeliskDuder
 {
     // Start is called before the first frame update
 	public ObeliskDuder obelisk;
-
+    public BoxCollider obCollider;
 
     void Start()
     {
         SessionManager.singleton.obelisks.Add(this);
         torch = obelisk.torch;
+        obCollider = GetComponent<BoxCollider>();
+        obCollider.isTrigger = false;
+
+        obFire.torchLight.enabled = false;
+        obFire.fireParticleSystem.Stop();
+        obFire.isOn = false;
     }
 
     // Update is called once per frame

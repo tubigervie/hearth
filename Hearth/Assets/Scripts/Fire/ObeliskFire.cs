@@ -9,6 +9,7 @@ public class ObeliskFire : MonoBehaviour
     public ParticleSystem fireParticleSystem;
     public Light torchLight;
 
+    public bool isOn;
     public ObeliskDuder obeliskStats;
     //todo connect ratio to obelisk time
 
@@ -23,22 +24,25 @@ public class ObeliskFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        strengthPercentage = ObeliskDuder.timer / ObeliskDuder.maxTime; 
-
-        if(strengthPercentage < 0)
+        if(isOn)
         {
-            torchLight.enabled = false;
-            fireParticleSystem.Stop();
-        }
-        else
-        {
-            torchLight.enabled = true;
-            fireParticleSystem.Play();
-        }
+            strengthPercentage = ObeliskDuder.timer / ObeliskDuder.maxTime;
 
-        torchLight.range = minLightRange + (maxLightRange - minLightRange) * strengthPercentage;
-        var emission = fireParticleSystem.emission;
-        emission.rateOverTime = minParticleRate + (maxParticleRate - minParticleRate) * strengthPercentage;  
+            if (strengthPercentage < 0)
+            {
+                torchLight.enabled = false;
+                fireParticleSystem.Stop();
+            }
+            else
+            {
+                torchLight.enabled = true;
+                fireParticleSystem.Play();
+            }
+
+            torchLight.range = minLightRange + (maxLightRange - minLightRange) * strengthPercentage;
+            var emission = fireParticleSystem.emission;
+            emission.rateOverTime = minParticleRate + (maxParticleRate - minParticleRate) * strengthPercentage;
+        }
     }
 
     private void SpawnFireplaceSound()

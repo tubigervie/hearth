@@ -10,6 +10,7 @@ public class InteractableItem : MonoBehaviour
     public float count = 30;
     [SerializeField] GameObject model;
     [SerializeField] BoxCollider itemCollider;
+    public miniObeliskDuders refObelisk;
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +45,16 @@ public class InteractableItem : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject);
+            Item i = null;
+            i = ResourceManager.singleton.GetResourceItem(itemName);
+            if(i.itemType == ItemType.crystal)
+            {
+                this.gameObject.SetActive(false);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

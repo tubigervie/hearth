@@ -15,6 +15,7 @@ public class ObeliskDuder : MonoBehaviour
     public bool firstWoodEntered;
 
     public GameObject[] gemArray;
+    public InteractableItem[] gemInteractArray;
     public ObeliskFire obFire;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class ObeliskDuder : MonoBehaviour
         timer = maxTime;
         Sesh.obelisks.Add(this);
         obFire = GetComponentInChildren<ObeliskFire>();
+        obFire.isOn = true;
     }
 
     // Update is called once per frame
@@ -77,6 +79,16 @@ public class ObeliskDuder : MonoBehaviour
         for (int x = 0; x < SessionManager.singleton.gemCount; ++x)
         {
             gemArray[x].SetActive(true);
+        }
+        for(int i = 0; i < 4; ++i)
+        {
+            if (!gemInteractArray[i].gameObject.activeInHierarchy && gemInteractArray[i].refObelisk != null)
+            {
+                gemInteractArray[i].refObelisk.obFire.isOn = true;
+                gemInteractArray[i].refObelisk.obCollider.isTrigger = true;
+                gemInteractArray[i].refObelisk.obFire.torchLight.enabled = true;
+                gemInteractArray[i].refObelisk.obFire.fireParticleSystem.Play();
+            }
         }
         if (SessionManager.singleton.gemCount == 4)
         {
