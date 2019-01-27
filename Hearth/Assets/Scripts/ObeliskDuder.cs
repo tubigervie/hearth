@@ -80,15 +80,22 @@ public class ObeliskDuder : MonoBehaviour
         {
             gemArray[x].SetActive(true);
         }
+        bool shouldPlayGemSound = false;
         for(int i = 0; i < 4; ++i)
         {
-            if (!gemInteractArray[i].gameObject.activeInHierarchy && gemInteractArray[i].refObelisk != null)
+            if (!gemInteractArray[i].gameObject.activeInHierarchy &&
+                gemInteractArray[i].refObelisk != null &&
+                !gemInteractArray[i].refObelisk.obFire.isOn)
             {
                 gemInteractArray[i].refObelisk.obFire.isOn = true;
                 gemInteractArray[i].refObelisk.obCollider.isTrigger = true;
                 gemInteractArray[i].refObelisk.obFire.torchLight.enabled = true;
                 gemInteractArray[i].refObelisk.obFire.fireParticleSystem.Play();
+                shouldPlayGemSound = true;
             }
+        }
+        if (shouldPlayGemSound)
+        {
         }
         if (SessionManager.singleton.gemCount == 4)
         {
@@ -108,6 +115,13 @@ public class ObeliskDuder : MonoBehaviour
     {
         AudioManager audioMgr = AudioManager.Get();
         GameObject soundInstance = GameObject.Instantiate(audioMgr.feedFlamePrefab, audioMgr.transform);
+        GameObject.Destroy(soundInstance, 10.0f);
+    }
+    
+    private void PlayPlaceGemSound()
+    {
+        AudioManager audioMgr = AudioManager.Get();
+        GameObject soundInstance = GameObject.Instantiate(audioMgr.placeGemPrefab, audioMgr.transform);
         GameObject.Destroy(soundInstance, 10.0f);
     }
 }

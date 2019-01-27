@@ -18,6 +18,7 @@
         <relationship name="effects">
             <destination>{bfe98931-4c70-47c6-833e-7a576f0800e9}</destination>
             <destination>{381a4077-2a6f-4bba-8229-0b28e4613e38}</destination>
+            <destination>{eba6daa9-e1ef-469f-bf59-ddd8a917e177}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{9b60bcb8-e20d-41d9-9cf7-b468717d6dfe}"/>
@@ -25,6 +26,11 @@
     <object class="Sidechain" id="{381a4077-2a6f-4bba-8229-0b28e4613e38}">
         <relationship name="targets">
             <destination>{aa0e1776-9935-4b57-9946-cdfd84d3aa08}</destination>
+        </relationship>
+    </object>
+    <object class="Sidechain" id="{eba6daa9-e1ef-469f-bf59-ddd8a917e177}">
+        <relationship name="targets">
+            <destination>{d7f40557-12f8-43ea-98cc-3ee09ed5920b}</destination>
         </relationship>
     </object>
 </objects>
