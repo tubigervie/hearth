@@ -15,10 +15,10 @@ MonoBehaviour:
   resourceItems:
   - itemID: Stick
     itemType: 0
-    value: 1
+    value: 10
   - itemID: Log
     itemType: 0
-    value: 5
+    value: 60
   - itemID: Gem
     itemType: 1
     value: 1
