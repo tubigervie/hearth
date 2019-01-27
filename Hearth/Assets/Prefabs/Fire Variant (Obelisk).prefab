@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 2890035060775763872, guid: df035e1a45649db489ff3393c7dbf6b6,
         type: 3}
       propertyPath: m_Name
-      value: Obelisk Fire
+      value: Fire Variant (Obelisk)
       objectReference: {fileID: 0}
     - target: {fileID: 7830113876813090362, guid: df035e1a45649db489ff3393c7dbf6b6,
         type: 3}
@@ -144,7 +144,8 @@ PrefabInstance:
       propertyPath: torchLight
       value: 
       objectReference: {fileID: 5030390150974375029}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6145187024526593605, guid: df035e1a45649db489ff3393c7dbf6b6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: df035e1a45649db489ff3393c7dbf6b6, type: 3}
 --- !u!1 &6517401712882821704 stripped
 GameObject:
