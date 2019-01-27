@@ -43,8 +43,17 @@ public class miniObeliskDuders : ObeliskDuder
             ObeliskDuder.timer += woodAmount * obelisk.woodTime;
             //Debug.Log(timer);
             ObeliskDuder.timer = Mathf.Clamp(ObeliskDuder.timer, 0, ObeliskDuder.maxTime);
+
+            PlayLightTorchSound();
         }
         SessionManager.singleton.woodCount = 0;
 
+    }
+    
+    private void PlayLightTorchSound()
+    {
+        AudioManager audioMgr = AudioManager.Get();
+        GameObject soundInstance = GameObject.Instantiate(audioMgr.feedFlameLightPrefab, audioMgr.transform);
+        GameObject.Destroy(soundInstance, 10.0f);
     }
 }
