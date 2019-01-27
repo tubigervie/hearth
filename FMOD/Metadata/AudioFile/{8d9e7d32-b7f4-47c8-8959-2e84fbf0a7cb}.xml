@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{8d9e7d32-b7f4-47c8-8959-2e84fbf0a7cb}">
+        <property name="assetPath">
+            <value>PickUpWood.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>2.6099999999999999</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{17a8a15b-93c0-473e-bfba-5d433813c491}</destination>
+        </relationship>
+    </object>
+</objects>
