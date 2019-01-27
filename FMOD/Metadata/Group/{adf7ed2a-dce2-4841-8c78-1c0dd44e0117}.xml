@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="MixerGroup" id="{adf7ed2a-dce2-4841-8c78-1c0dd44e0117}">
+        <property name="name">
+            <value>HomeFlame</value>
+        </property>
+        <relationship name="effectChain">
+            <destination>{57e3140c-e203-4ff8-bedf-33712b90f328}</destination>
+        </relationship>
+        <relationship name="panner">
+            <destination>{0b05983c-88d1-4247-a018-f676169b7870}</destination>
+        </relationship>
+        <relationship name="output">
+            <destination>{68823237-6e1b-4e43-a2ff-16f2ab0194f1}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{57e3140c-e203-4ff8-bedf-33712b90f328}">
+        <relationship name="effects">
+            <destination>{8d6f5c0f-614c-4bb8-be38-c711d09e5e80}</destination>
+            <destination>{45a7dd3b-1f89-4f76-a2c1-f95fd88250a2}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusPanner" id="{0b05983c-88d1-4247-a018-f676169b7870}"/>
+    <object class="MixerBusFader" id="{8d6f5c0f-614c-4bb8-be38-c711d09e5e80}"/>
+    <object class="Sidechain" id="{45a7dd3b-1f89-4f76-a2c1-f95fd88250a2}">
+        <relationship name="targets">
+            <destination>{aa0e1776-9935-4b57-9946-cdfd84d3aa08}</destination>
+        </relationship>
+    </object>
+</objects>
