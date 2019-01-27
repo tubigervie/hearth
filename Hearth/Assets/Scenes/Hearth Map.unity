@@ -284,8 +284,6 @@ GameObject:
   - component: {fileID: 65560674}
   - component: {fileID: 65560678}
   - component: {fileID: 65560677}
-  - component: {fileID: 65560676}
-  - component: {fileID: 65560675}
   m_Layer: 0
   m_Name: Jem 4
   m_TagString: Untagged
@@ -307,36 +305,6 @@ Transform:
   m_Father: {fileID: 1563602683}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 37.429, y: 21.969002, z: -1.9800001}
---- !u!114 &65560675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65560673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f9ed770e80a6844b7bd0ba4b580e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Gem
-  isRespawnable: 0
-  count: 30
-  model: {fileID: 0}
-  itemCollider: {fileID: 0}
---- !u!65 &65560676
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65560673}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &65560677
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1988,8 +1956,6 @@ GameObject:
   - component: {fileID: 309587192}
   - component: {fileID: 309587196}
   - component: {fileID: 309587195}
-  - component: {fileID: 309587194}
-  - component: {fileID: 309587193}
   m_Layer: 0
   m_Name: Jem 1
   m_TagString: Untagged
@@ -2011,36 +1977,6 @@ Transform:
   m_Father: {fileID: 1563602683}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 37.429, y: 21.969002, z: -1.9800001}
---- !u!114 &309587193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309587191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f9ed770e80a6844b7bd0ba4b580e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Gem
-  isRespawnable: 0
-  count: 30
-  model: {fileID: 0}
-  itemCollider: {fileID: 0}
---- !u!65 &309587194
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309587191}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &309587195
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9143,8 +9079,6 @@ GameObject:
   - component: {fileID: 1753758660}
   - component: {fileID: 1753758664}
   - component: {fileID: 1753758663}
-  - component: {fileID: 1753758662}
-  - component: {fileID: 1753758661}
   m_Layer: 0
   m_Name: Jem 2
   m_TagString: Untagged
@@ -9166,36 +9100,6 @@ Transform:
   m_Father: {fileID: 1563602683}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 37.429, y: 21.969002, z: -1.9800001}
---- !u!114 &1753758661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1753758659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f9ed770e80a6844b7bd0ba4b580e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Gem
-  isRespawnable: 0
-  count: 30
-  model: {fileID: 0}
-  itemCollider: {fileID: 0}
---- !u!65 &1753758662
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1753758659}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1753758663
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9580,8 +9484,6 @@ GameObject:
   - component: {fileID: 1844014153}
   - component: {fileID: 1844014157}
   - component: {fileID: 1844014156}
-  - component: {fileID: 1844014155}
-  - component: {fileID: 1844014154}
   m_Layer: 0
   m_Name: Jem 3
   m_TagString: Untagged
@@ -9603,36 +9505,6 @@ Transform:
   m_Father: {fileID: 1563602683}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 37.429, y: 21.969002, z: -1.9800001}
---- !u!114 &1844014154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844014152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f9ed770e80a6844b7bd0ba4b580e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Gem
-  isRespawnable: 0
-  count: 30
-  model: {fileID: 0}
-  itemCollider: {fileID: 0}
---- !u!65 &1844014155
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844014152}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1844014156
 MeshRenderer:
   m_ObjectHideFlags: 0
