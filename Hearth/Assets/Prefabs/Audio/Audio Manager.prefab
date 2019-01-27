@@ -69,3 +69,5 @@ MonoBehaviour:
     type: 3}
   feedFlameLightPrefab: {fileID: 691730197373477572, guid: 29d649abe3ecaa04cba858fc00207982,
     type: 3}
+  fadeOutPrefab: {fileID: 4537323970413843066, guid: 3c84054a14565934abe36367bfa2d102,
+    type: 3}

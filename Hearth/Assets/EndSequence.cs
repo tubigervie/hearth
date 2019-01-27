@@ -44,7 +44,6 @@ public class EndSequence : MonoBehaviour
             if(Vector3.Distance(Camera.main.transform.position, newPos) <= 1f)
             {
                 SessionManager.singleton.PlayGem(5);
-                whiteScreen.CrossFadeAlpha(1, fadeOutTime + 2, false);
                 startEndCameraPan = false;
                 StartCoroutine("ReloadGame");
             }
@@ -53,8 +52,18 @@ public class EndSequence : MonoBehaviour
 
     IEnumerator ReloadGame()
     {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(1.5f);
+        PlayFadeOutSound();
+        whiteScreen.CrossFadeAlpha(1, fadeOutTime, false);
+        yield return new WaitForSeconds(7);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+    }
+
+    private void PlayFadeOutSound()
+    {
+        AudioManager audioMgr = AudioManager.Get();
+        GameObject soundInstance = GameObject.Instantiate(audioMgr.fadeOutPrefab, audioMgr.transform);
+        GameObject.Destroy(soundInstance, 10.0f);
     }
 }
