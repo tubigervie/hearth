@@ -19,3 +19,6 @@ MonoBehaviour:
   - itemID: Log
     itemType: 0
     value: 5
+  - itemID: Gem
+    itemType: 1
+    value: 1
