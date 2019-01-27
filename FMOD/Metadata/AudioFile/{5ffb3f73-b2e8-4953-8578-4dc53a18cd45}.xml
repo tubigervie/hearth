@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{5ffb3f73-b2e8-4953-8578-4dc53a18cd45}">
+        <property name="assetPath">
+            <value>gemSequenceUpwards.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>6.3499999999999996</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{17a8a15b-93c0-473e-bfba-5d433813c491}</destination>
+        </relationship>
+    </object>
+</objects>
