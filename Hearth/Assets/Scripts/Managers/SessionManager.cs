@@ -82,14 +82,6 @@ public class SessionManager : MonoBehaviour
                    gemCount = Mathf.Clamp(gemCount, 0, 4);
                     PlayGem(gemCount);
                     ObeliskDuder obelisk = ObeliskDuder.singleton;
-                for (int x = 0; x < gemCount; ++x)
-                {
-                    mainObelisk.gemArray[x].SetActive(true);
-                }
-                if(gemCount == 4)
-                {
-                    EndSequence.singleton.EndGame();
-                }
                 break;
         }
     }
@@ -139,6 +131,9 @@ public class SessionManager : MonoBehaviour
                 soundInstance = GameObject.Instantiate(audioMgr.gemCPrefab, audioMgr.transform);
                 break;
             case 4:
+                soundInstance = GameObject.Instantiate(audioMgr.gemDPrefab, audioMgr.transform);
+                break;
+            case 5:
                 soundInstance = GameObject.Instantiate(audioMgr.gemSequencePrefab, audioMgr.transform);
                 break;
             default:

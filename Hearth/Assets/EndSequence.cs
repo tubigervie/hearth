@@ -42,7 +42,7 @@ public class EndSequence : MonoBehaviour
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, newPos, Time.deltaTime * 1f);
             if(Vector3.Distance(Camera.main.transform.position, newPos) <= 1f)
             {
-                Debug.Log("Start fading out!");
+                SessionManager.singleton.PlayGem(5);
                 whiteScreen.CrossFadeAlpha(1, fadeOutTime, false);
                 startEndCameraPan = false;
             }

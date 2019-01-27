@@ -73,6 +73,14 @@ public class ObeliskDuder : MonoBehaviour
             timer = Mathf.Clamp(timer, 0, 180);
         }
         SessionManager.singleton.woodCount = 0;
+        for (int x = 0; x < SessionManager.singleton.gemCount; ++x)
+        {
+            gemArray[x].SetActive(true);
+        }
+        if (SessionManager.singleton.gemCount == 4)
+        {
+            EndSequence.singleton.EndGame();
+        }
     }
 
     public void DisplayCurrentGems()
