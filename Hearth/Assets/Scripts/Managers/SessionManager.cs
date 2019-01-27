@@ -42,6 +42,13 @@ public class SessionManager : MonoBehaviour
                 woodCount += i.value;
                 break;
             case ItemType.crystal:
+                gemCount += i.value;
+                   gemCount = Mathf.Clamp(gemCount, 0, 4);
+                ObeliskDuder obelisk = ObeliskDuder.singleton;
+                for (int x = 0; x < gemCount; ++x)
+                {
+                    obelisk.gemArray[x].SetActive(true);
+                }
                 break;
         }
     }

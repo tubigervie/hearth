@@ -19,7 +19,9 @@ public class IntroSequence : MonoBehaviour
         Camera.main.transform.position = startingCameraTransform.position;
 
         if (od.firstWoodEntered)
-            startGame(); 
+        {
+            startGame();
+        }
     }
 
     public void startGame()
