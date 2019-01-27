@@ -13,9 +13,13 @@ public class ObeliskFire : MonoBehaviour
     //todo connect ratio to obelisk time
 
     [Range(0, 1)]
-    public float strengthPercentage; 
+    public float strengthPercentage;
 
-
+    public void Start()
+    {
+        SpawnFireplaceSound();
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -35,5 +39,13 @@ public class ObeliskFire : MonoBehaviour
         torchLight.range = minLightRange + (maxLightRange - minLightRange) * strengthPercentage;
         var emission = fireParticleSystem.emission;
         emission.rateOverTime = minParticleRate + (maxParticleRate - minParticleRate) * strengthPercentage;  
+    }
+
+    private void SpawnFireplaceSound()
+    {
+        GameObject obj = GameObject.Instantiate(AudioManager.Get().fireplaceEmitterPrefab, this.transform);
+        // Line up fireplace sound emitter to camera along y-plane.
+        Debug.Log(new Vector3(this.transform.position.x, 15.0f, this.transform.position.z));
+        obj.transform.position = new Vector3(this.transform.position.x, 15.0f, this.transform.position.z);
     }
 }

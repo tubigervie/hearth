@@ -73,11 +73,15 @@ public class SessionManager : MonoBehaviour
         switch(i.itemType)
         {
             case ItemType.wood:
+                    Debug.Log("COLLECTED");
                 woodCount += i.value;
+                PlayWoodSound();
                 break;
             case ItemType.crystal:
                 gemCount += i.value;
                    gemCount = Mathf.Clamp(gemCount, 0, 4);
+                    PlayGem(gemCount);
+                    ObeliskDuder obelisk = ObeliskDuder.singleton;
                 for (int x = 0; x < gemCount; ++x)
                 {
                     mainObelisk.gemArray[x].SetActive(true);
@@ -101,7 +105,7 @@ public class SessionManager : MonoBehaviour
             Invoke("Respawn", 3);
         }
     }
-
+    
     void Respawn()
     {
         PlayerControl.singleton.transform.position = startPosition;
@@ -111,6 +115,36 @@ public class SessionManager : MonoBehaviour
         ObeliskDuder.timer = ObeliskDuder.maxTime;
 
     }
-
     
+    public void PlayWoodSound()
+    {
+        AudioManager audioMgr = AudioManager.Get();
+        GameObject soundInstance = GameObject.Instantiate(audioMgr.pickUpWoodPrefab, audioMgr.transform);
+        GameObject.Destroy(soundInstance, 5.0f);
+    }
+
+    public void PlayGem(int gemCount)
+    {
+        AudioManager audioMgr = AudioManager.Get();
+        GameObject soundInstance = null;
+        switch (gemCount)
+        {
+            case 1:
+                soundInstance = GameObject.Instantiate(audioMgr.gemAPrefab, audioMgr.transform);
+                break;
+            case 2:
+                soundInstance = GameObject.Instantiate(audioMgr.gemBPrefab, audioMgr.transform);
+                break;
+            case 3:
+                soundInstance = GameObject.Instantiate(audioMgr.gemCPrefab, audioMgr.transform);
+                break;
+            case 4:
+                soundInstance = GameObject.Instantiate(audioMgr.gemSequencePrefab, audioMgr.transform);
+                break;
+            default:
+                Debug.LogError("Awkward Gem count: " + gemCount.ToString());
+                break;
+        }
+        GameObject.Destroy(soundInstance, 10.0f);
+    }
 }
