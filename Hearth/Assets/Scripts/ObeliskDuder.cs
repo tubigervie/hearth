@@ -8,6 +8,10 @@ public class ObeliskDuder : MonoBehaviour
 	public float timer;
 	public float maxTime = 180f;
     public float woodTime = 30f;
+
+    //starting the game
+    public bool firstWoodEntered; 
+
     bool lit;
 
 	
@@ -48,11 +52,14 @@ public class ObeliskDuder : MonoBehaviour
         float woodAmount = SessionManager.singleton.woodCount;
         if(woodAmount != 0)
         {
-            Debug.Log(timer);
+            //Debug.Log(timer);
             timer += woodAmount * woodTime;
-            Debug.Log(timer);
-            timer = Mathf.Clamp(timer, 0, 180);
+            //Debug.Log(timer);
+            timer = Mathf.Clamp(timer, 0, maxTime);
+
+            firstWoodEntered = true; 
         }
         SessionManager.singleton.woodCount = 0;
+        
     }
 }

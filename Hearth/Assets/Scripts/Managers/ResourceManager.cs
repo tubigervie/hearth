@@ -31,7 +31,7 @@ public class ResourceManager : MonoBehaviour
             }
             else
             {
-                Debug.Log(obj.resourceItems[i].itemID + " has been added!");
+                //Debug.Log(obj.resourceItems[i].itemID + " has been added!");
                 itemIDs.Add(obj.resourceItems[i].itemID, i);
             }
         }

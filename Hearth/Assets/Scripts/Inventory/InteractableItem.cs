@@ -20,7 +20,7 @@ public class InteractableItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Im in");
+        //Debug.Log("Im in");
         SessionManager.singleton.AddItem(itemName);
         Destroy(this.gameObject);
     }
