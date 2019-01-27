@@ -45,4 +45,13 @@ public class SessionManager : MonoBehaviour
                 break;
         }
     }
+	
+	public void darknessCountdown(float time)
+	{
+		darknessTimer -= time;
+		if(darknessTimer <= 0)
+		{
+			//die
+		}
+	}
 }
