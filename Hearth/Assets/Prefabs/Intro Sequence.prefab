@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -241.4, y: 83.7}
-  m_SizeDelta: {x: 482.7, y: 167.3}
+  m_AnchoredPosition: {x: -593, y: 44}
+  m_SizeDelta: {x: 1138.4, y: 52.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6565193438823985827
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'made for the 2019 Global Game Jam by [insert our names here i guess] '
+  m_text: '- Evan, Ervie, Andrew, Calvin, Raquel, Santiago @UCI , GGJ ''19'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 260
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -134,12 +134,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 0}
-    characterCount: 69
+    characterCount: 62
     spriteCount: 0
-    spaceCount: 14
-    wordCount: 14
+    spaceCount: 10
+    wordCount: 10
     linkCount: 0
-    lineCount: 3
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -170,6 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6565193440106866292}
   - component: {fileID: 6565193440106866293}
+  - component: {fileID: 404608420550621164}
   m_Layer: 5
   m_Name: Intro Sequence
   m_TagString: Untagged
@@ -213,6 +214,18 @@ MonoBehaviour:
   fadeOutTime: 3
   titleBanner: {fileID: 6565193440163404953}
   od: {fileID: 0}
+--- !u!225 &404608420550621164
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6565193440106866295}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6565193440163404955
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 381}
-  m_SizeDelta: {x: 1303.5, y: 168}
+  m_AnchoredPosition: {x: -0.000015258789, y: -41}
+  m_SizeDelta: {x: 1216.4, y: 283.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6565193440163404958
 CanvasRenderer:
@@ -278,7 +291,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: fa1649ae59651664badfc8c69bba6cc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8969653177573814178
 RectTransform:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8969653178188946477
 RectTransform:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8969653178316778083
 RectTransform:
   m_ObjectHideFlags: 0
@@ -420,80 +420,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6565193440106866293, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: od
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985837, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -593
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985837, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 44
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985837, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1138.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985837, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 52.8
-      objectReference: {fileID: 0}
     - target: {fileID: 6565193438823985826, guid: 37bb532715921ad42a79340e69030646,
         type: 3}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6565193438823985826, guid: 37bb532715921ad42a79340e69030646,
         type: 3}
       propertyPath: m_isInputParsingRequired
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985826, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_text
-      value: '- Evan, Ervie, Andrew, Calvin, Raquel, Santiago @UCI , GGJ ''19'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985826, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 62
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985826, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985826, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985826, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985826, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985826, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565193438823985826, guid: 37bb532715921ad42a79340e69030646,
-        type: 3}
-      propertyPath: m_textAlignment
-      value: 260
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37bb532715921ad42a79340e69030646, type: 3}
