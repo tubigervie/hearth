@@ -11,7 +11,7 @@ public class Torch : MonoBehaviour
     /// <summary>
     /// If 0, litTimeRemaining is set to MaxDuration
     /// </summary>
-    public float timeGainedOnFuelAddition = 0f;  
+    public float timeGainedOnFuelAddition = 0f; 
 
     public bool lit; 
 
@@ -50,6 +50,7 @@ public class Torch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        litTimeRemaining = Mathf.Clamp(litTimeRemaining, -5, maxDuration); 
         if(lit)
         {
             if (litTimeRemaining > 0) litTimeRemaining -= Time.deltaTime; 

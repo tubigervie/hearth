@@ -7,7 +7,7 @@ public class ObeliskFire : MonoBehaviour
 {
     public float minLightRange, maxLightRange, minParticleRate, maxParticleRate;
 
-    Torch torch; 
+    public Torch torch; 
     //todo connect ratio to obelisk time
 
     [Range(0, 1)]
@@ -21,6 +21,8 @@ public class ObeliskFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        strengthPercentage = torch.litTimeRemaining / torch.maxDuration; 
+
         torch.torchLight.range = minLightRange + (maxLightRange - minLightRange) * strengthPercentage;
         var emission = torch.fireParticleSystem.emission;
         emission.rateOverTime = minParticleRate + (maxParticleRate - minParticleRate) * strengthPercentage;  

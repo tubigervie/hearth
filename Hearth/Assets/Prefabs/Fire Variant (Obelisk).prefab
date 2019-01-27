@@ -16,6 +16,7 @@ MonoBehaviour:
   maxLightRange: 12
   minParticleRate: 15
   maxParticleRate: 150
+  torch: {fileID: 0}
   strengthPercentage: 0
 --- !u!114 &4831367282786973712
 MonoBehaviour:
@@ -29,10 +30,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8499e802f3baf484880c2d058efe721b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDuration: 10
-  litTimeRemaining: 0
-  timeGainedOnFuelAddition: 0
-  lit: 0
+  maxDuration: 180
+  litTimeRemaining: 10
+  timeGainedOnFuelAddition: 30
+  lit: 1
   onLit:
     m_PersistentCalls:
       m_Calls: []
@@ -106,6 +107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010043082818064797, guid: df035e1a45649db489ff3393c7dbf6b6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8298633240465035997, guid: df035e1a45649db489ff3393c7dbf6b6,
         type: 3}
