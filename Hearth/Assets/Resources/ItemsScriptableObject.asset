@@ -15,7 +15,7 @@ MonoBehaviour:
   resourceItems:
   - itemID: Stick
     itemType: 0
-    value: 10
+    value: 1
   - itemID: Log
     itemType: 0
     value: 60

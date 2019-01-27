@@ -7,6 +7,7 @@ public class ObeliskDuder : MonoBehaviour
 	SessionManager Sesh;
 	public float timer;
 	public float maxTime = 180f;
+    public float woodTime = 30f;
 	
     // Start is called before the first frame update
     void Start()
@@ -39,4 +40,17 @@ public class ObeliskDuder : MonoBehaviour
 			timer -= d;
 		}
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        float woodAmount = SessionManager.singleton.woodCount;
+        if(woodAmount != 0)
+        {
+            Debug.Log(timer);
+            timer += woodAmount * woodTime;
+            Debug.Log(timer);
+            timer = Mathf.Clamp(timer, 0, 180);
+        }
+        SessionManager.singleton.woodCount = 0;
+    }
 }

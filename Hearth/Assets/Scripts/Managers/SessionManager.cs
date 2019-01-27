@@ -48,10 +48,11 @@ public class SessionManager : MonoBehaviour
 	
 	public void darknessCountdown(float time)
 	{
-		darknessTimer -= time;
-		if(darknessTimer <= 0)
-		{
-			//die
-		}
-	}
+
+        darknessTimer -= time;
+        if (darknessTimer <= 0)
+        {
+            Debug.Log("You are dead");
+        }
+    }
 }
