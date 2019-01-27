@@ -20,11 +20,11 @@ public class miniObeliskDuders : MonoBehaviour
 	
 	private void OnTriggerEnter(Collider other)
     {
-		if (obelisk.timer > 0 && obelisk.torch.lit != true)
+		if (ObeliskDuder.timer > 0 && obelisk.torch.lit != true)
 		{
 			obelisk.torch.setLit(!obelisk.torch.lit);
 		}
-		else if ( obelisk.timer > 0 && obelisk.torch.lit == true && obelisk.torch.litTimeRemaining < obelisk.torch.maxDuration)
+		else if (ObeliskDuder.timer > 0 && obelisk.torch.lit == true && obelisk.torch.litTimeRemaining < obelisk.torch.maxDuration)
 		{
 			obelisk.torch.litTimeRemaining += obelisk.torch.timeGainedOnFuelAddition  == 0 ? obelisk.torch.maxDuration - obelisk.torch.litTimeRemaining : obelisk.torch.timeGainedOnFuelAddition;
 		}
@@ -32,9 +32,9 @@ public class miniObeliskDuders : MonoBehaviour
         if(woodAmount != 0)
         {
             //Debug.Log(timer);
-            obelisk.timer += woodAmount * obelisk.woodTime;
+            ObeliskDuder.timer += woodAmount * obelisk.woodTime;
             //Debug.Log(timer);
-            obelisk.timer = Mathf.Clamp(obelisk.timer, 0, obelisk.maxTime); 
+            ObeliskDuder.timer = Mathf.Clamp(ObeliskDuder.timer, 0, ObeliskDuder.maxTime); 
         }
         SessionManager.singleton.woodCount = 0;
         

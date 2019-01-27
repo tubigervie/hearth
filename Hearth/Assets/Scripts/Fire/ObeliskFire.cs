@@ -19,7 +19,7 @@ public class ObeliskFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        strengthPercentage = obeliskStats.timer / obeliskStats.maxTime; 
+        strengthPercentage = ObeliskDuder.timer / ObeliskDuder.maxTime; 
 
         if(strengthPercentage < 0)
         {

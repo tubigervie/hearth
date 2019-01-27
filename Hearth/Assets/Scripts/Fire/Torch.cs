@@ -60,6 +60,10 @@ public class Torch : MonoBehaviour
             //animator.SetBool("QuarterTimeLeft", litTimeRemaining < maxDuration / 4);
             //animator.SetBool("Lit", lit); 
         }
+        else
+        {
+            SessionManager.singleton.CheckForObelisks();
+        }
 
         var emission = fireParticleSystem.emission;
         emission.rateOverTime = minParticleRate + (maxParticleRate - minParticleRate) * (litTimeRemaining / maxDuration);

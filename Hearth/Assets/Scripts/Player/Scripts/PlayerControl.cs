@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-
+    public static PlayerControl singleton;
 	public float speed = 5;
 	public float maxSpeed;
 	
 	private Rigidbody rigidBody;
     CameraManager cameraManager;
-	
+    public bool dead;
+
+    private void Awake()
+    {
+        singleton = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -27,13 +32,15 @@ public class PlayerControl : MonoBehaviour
 	
 	void FixedUpdate()
 	{
+        if(!dead)
+        {
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
 
-		float moveHorizontal = Input.GetAxis("Horizontal");
-		float moveVertical = Input.GetAxis("Vertical");
-		
-		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-		
-		rigidBody.MovePosition(transform.position + movement * speed * Time.deltaTime);
+            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+            rigidBody.MovePosition(transform.position + movement * speed * Time.deltaTime);
+        }
         /*
 		if (rigidBody.velocity.magnitude <= maxSpeed)
 		{

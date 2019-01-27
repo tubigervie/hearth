@@ -5,6 +5,11 @@ using UnityEngine;
 public class InteractableItem : MonoBehaviour
 {
     public string itemName; //MUST MATCH ITS EQUIVALENT ITEM ID
+    public bool isRespawnable;
+    bool startCount;
+    public float count = 30;
+    [SerializeField] GameObject model;
+    BoxCollider itemCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -15,13 +20,30 @@ public class InteractableItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(startCount)
+        {
+            count -= Time.deltaTime;
+            if(count <= 0)
+            {
+                count = 30;
+                gameObject.SetActive(true);
+                startCount = false;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Im in");
         SessionManager.singleton.AddItem(itemName);
-        Destroy(this.gameObject);
+        if(isRespawnable && gameObject.activeSelf)
+        {
+            gameObject.SetActive(false);
+            startCount = true;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

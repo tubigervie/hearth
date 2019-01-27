@@ -6,8 +6,8 @@ public class ObeliskDuder : MonoBehaviour
 {
     public static ObeliskDuder singleton;
     SessionManager Sesh;
-    public float timer;
-    public float maxTime = 180f;
+    public static float timer;
+    public static float maxTime = 180f;
     public float woodTime = 30f;
     bool lit;
     public Torch torch;
@@ -15,12 +15,7 @@ public class ObeliskDuder : MonoBehaviour
     public bool firstWoodEntered;
 
     public GameObject[] gemArray;
-
-    private void Awake()
-    {
-        singleton = this;
-    }
-
+    public ObeliskFire obFire;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +25,8 @@ public class ObeliskDuder : MonoBehaviour
             gemArray[i].SetActive(true);
         }
         timer = maxTime;
+        Sesh.obelisks.Add(this);
+        obFire = GetComponentInChildren<ObeliskFire>();
     }
 
     // Update is called once per frame
@@ -45,16 +42,10 @@ public class ObeliskDuder : MonoBehaviour
     void countDown()
     {
         float d = Time.deltaTime;
-        if (timer <= 0)
-        {
-            Sesh.darknessCountdown(d);
+        timer -= d;
+        if (timer < 0)
+            timer = 0;
 
-        }
-        else
-        {
-            Sesh.darknessTimer = 5;
-            timer -= d;
-        }
     }
 
     private void OnTriggerEnter(Collider other)
