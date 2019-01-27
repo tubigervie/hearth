@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
     public GameObject deathPrefab;
     public GameObject placeGemPrefab;
     public GameObject feedFlameLightPrefab;
+    public GameObject fadeOutPrefab;
 
     private GameObject terribleWeatherInstance;
 

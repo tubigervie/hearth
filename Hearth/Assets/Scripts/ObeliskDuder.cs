@@ -76,26 +76,29 @@ public class ObeliskDuder : MonoBehaviour
             PlayLightTorchSound();
         }
         SessionManager.singleton.woodCount = 0;
+        bool shouldPlayGemSound = false;
         for (int x = 0; x < SessionManager.singleton.gemCount; ++x)
         {
-            gemArray[x].SetActive(true);
+            if (!gemArray[x].activeSelf)
+            {
+                gemArray[x].SetActive(true);
+                shouldPlayGemSound = true;
+            }
         }
-        bool shouldPlayGemSound = false;
         for(int i = 0; i < 4; ++i)
         {
             if (!gemInteractArray[i].gameObject.activeInHierarchy &&
-                gemInteractArray[i].refObelisk != null &&
-                !gemInteractArray[i].refObelisk.obFire.isOn)
+                gemInteractArray[i].refObelisk != null)
             {
                 gemInteractArray[i].refObelisk.obFire.isOn = true;
                 gemInteractArray[i].refObelisk.obCollider.isTrigger = true;
                 gemInteractArray[i].refObelisk.obFire.torchLight.enabled = true;
                 gemInteractArray[i].refObelisk.obFire.fireParticleSystem.Play();
-                shouldPlayGemSound = true;
             }
         }
         if (shouldPlayGemSound)
         {
+            PlayPlaceGemSound();
         }
         if (SessionManager.singleton.gemCount == 4)
         {

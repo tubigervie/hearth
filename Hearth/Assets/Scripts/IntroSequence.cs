@@ -7,9 +7,13 @@ public class IntroSequence : MonoBehaviour
     public float fadeOutTime; 
     Transform startingCameraTransform;
     public Image titleBanner;
-    public ObeliskDuder od;  
+    public ObeliskDuder od;
 
-    
+    void Awake()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
+
     private void Start()
     {
         startingCameraTransform = Camera.main.transform; 
@@ -18,15 +22,28 @@ public class IntroSequence : MonoBehaviour
     {
         Camera.main.transform.position = startingCameraTransform.position;
 
-        if (od.firstWoodEntered)
+        if (od.firstWoodEntered && canvasGroup.alpha == 1)
         {
             startGame();
+        }
+    }
+    CanvasGroup canvasGroup;
+
+
+
+
+    IEnumerator FadeOut()
+    {
+        while (canvasGroup.alpha > 0)
+        {
+            canvasGroup.alpha -= Time.deltaTime / fadeOutTime;
+            yield return null;
         }
     }
 
     public void startGame()
     {
-        titleBanner.CrossFadeAlpha(0, fadeOutTime, false);
+        StartCoroutine("FadeOut");
         Camera.main.GetComponentInParent<CameraManager>().followPlayer = true;
         Destroy(gameObject, fadeOutTime);
     }
