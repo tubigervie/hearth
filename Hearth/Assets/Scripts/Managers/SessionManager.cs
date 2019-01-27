@@ -7,6 +7,7 @@ public class SessionManager : MonoBehaviour
 {
     public static SessionManager singleton;
 
+
     [Header("In Inventory")]
     public int woodCount = 0;
     public int gemCount = 0;
@@ -48,6 +49,10 @@ public class SessionManager : MonoBehaviour
                 for (int x = 0; x < gemCount; ++x)
                 {
                     obelisk.gemArray[x].SetActive(true);
+                }
+                if(gemCount == 4)
+                {
+                    EndSequence.singleton.EndGame();
                 }
                 break;
         }
