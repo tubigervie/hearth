@@ -68,6 +68,7 @@ public class ObeliskDuder : MonoBehaviour
             torch.litTimeRemaining += torch.timeGainedOnFuelAddition == 0 ? torch.maxDuration - torch.litTimeRemaining : torch.timeGainedOnFuelAddition;
         }
         float woodAmount = SessionManager.singleton.woodCount;
+        Debug.Log("trigger entered");
         if (woodAmount != 0)
         {
             Debug.Log(timer);

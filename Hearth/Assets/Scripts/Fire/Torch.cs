@@ -8,6 +8,7 @@ public class Torch : MonoBehaviour
     public float maxDuration; 
     public float litTimeRemaining;
 
+    public float minParticleRate, maxParticleRate;
     /// <summary>
     /// If 0, litTimeRemaining is set to MaxDuration
     /// </summary>
@@ -59,5 +60,8 @@ public class Torch : MonoBehaviour
             //animator.SetBool("QuarterTimeLeft", litTimeRemaining < maxDuration / 4);
             //animator.SetBool("Lit", lit); 
         }
+
+        var emission = fireParticleSystem.emission;
+        emission.rateOverTime = minParticleRate + (maxParticleRate - minParticleRate) * (litTimeRemaining / maxDuration);
     }   
 }

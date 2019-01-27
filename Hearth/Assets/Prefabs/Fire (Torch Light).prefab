@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7830113876813090362}
   - component: {fileID: 2890035060775763873}
-  - component: {fileID: 6145187024526593605}
   m_Layer: 0
   m_Name: Fire (Torch Light)
   m_TagString: Untagged
@@ -46,8 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8499e802f3baf484880c2d058efe721b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDuration: 10
+  maxDuration: 30
   litTimeRemaining: 0
+  minParticleRate: 1
+  maxParticleRate: 35
   timeGainedOnFuelAddition: 0
   lit: 0
   onLit:
@@ -57,25 +58,6 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   fireParticleSystem: {fileID: 8298633240465035996}
   torchLight: {fileID: 4010043082818064797}
---- !u!95 &6145187024526593605
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2890035060775763872}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 336446685ace8af4cac3572143717297, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4702883993881484399
 GameObject:
   m_ObjectHideFlags: 0

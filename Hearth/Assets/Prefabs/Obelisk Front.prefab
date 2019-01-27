@@ -63,6 +63,9 @@ MonoBehaviour:
   timer: 0
   maxTime: 180
   woodTime: 30
+  torch: {fileID: 0}
+  firstWoodEntered: 0
+  gemArray: []
 --- !u!1 &4722184935208357324
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,14 +242,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6517401712882821705, guid: 6e2b745a5ce69544dae9dd3495f7c7fa,
         type: 3}
-      propertyPath: strengthPercentage
-      value: 1
+      propertyPath: minLightRange
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6517401712882821705, guid: 6e2b745a5ce69544dae9dd3495f7c7fa,
         type: 3}
-      propertyPath: torchLight
-      value: 
-      objectReference: {fileID: 308244912801010368}
+      propertyPath: maxLightRange
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517401712882821705, guid: 6e2b745a5ce69544dae9dd3495f7c7fa,
+        type: 3}
+      propertyPath: minParticleRate
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6517401712882821705, guid: 6e2b745a5ce69544dae9dd3495f7c7fa,
         type: 3}
       propertyPath: fireParticleSystem
@@ -254,31 +262,20 @@ PrefabInstance:
       objectReference: {fileID: 4668888229730816385}
     - target: {fileID: 6517401712882821705, guid: 6e2b745a5ce69544dae9dd3495f7c7fa,
         type: 3}
+      propertyPath: torchLight
+      value: 
+      objectReference: {fileID: 308244912801010368}
+    - target: {fileID: 6517401712882821705, guid: 6e2b745a5ce69544dae9dd3495f7c7fa,
+        type: 3}
       propertyPath: obeliskStats
       value: 
       objectReference: {fileID: 4722184934926833343}
     - target: {fileID: 6517401712882821705, guid: 6e2b745a5ce69544dae9dd3495f7c7fa,
         type: 3}
-      propertyPath: minParticleRate
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5030390150974375029, guid: 6e2b745a5ce69544dae9dd3495f7c7fa,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4831367282786973712, guid: 6e2b745a5ce69544dae9dd3495f7c7fa,
-        type: 3}
-      propertyPath: litTimeRemaining
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 4831367282786973712, guid: 6e2b745a5ce69544dae9dd3495f7c7fa,
-        type: 3}
-      propertyPath: lit
+      propertyPath: strengthPercentage
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 2819559902445231021, guid: 6e2b745a5ce69544dae9dd3495f7c7fa, type: 3}
     - {fileID: 4831367282786973712, guid: 6e2b745a5ce69544dae9dd3495f7c7fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6e2b745a5ce69544dae9dd3495f7c7fa, type: 3}
 --- !u!4 &6866781036995169639 stripped

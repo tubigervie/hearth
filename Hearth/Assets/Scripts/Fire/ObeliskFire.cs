@@ -15,9 +15,6 @@ public class ObeliskFire : MonoBehaviour
     [Range(0, 1)]
     public float strengthPercentage; 
 
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
