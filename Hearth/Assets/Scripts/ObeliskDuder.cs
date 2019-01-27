@@ -9,7 +9,7 @@ public class ObeliskDuder : MonoBehaviour
 	public float maxTime = 180f;
     public float woodTime = 30f;
     bool lit;
-
+	public Torch torch;
 	
     // Start is called before the first frame update
     void Start()
@@ -45,6 +45,14 @@ public class ObeliskDuder : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+		if (timer > 0 && torch.lit != true)
+		{
+			torch.setLit(!torch.lit);
+		}
+		else if ( timer > 0 && torch.lit == true && torch.litTimeRemaining < torch.maxDuration)
+		{
+			torch.litTimeRemaining += torch.timeGainedOnFuelAddition  == 0 ? torch.maxDuration - torch.litTimeRemaining : torch.timeGainedOnFuelAddition;
+		}
         float woodAmount = SessionManager.singleton.woodCount;
         if(woodAmount != 0)
         {
