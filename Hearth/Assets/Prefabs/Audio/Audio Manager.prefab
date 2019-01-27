@@ -61,4 +61,5 @@ MonoBehaviour:
     type: 3}
   gemSequencePrefab: {fileID: 8320826796978127951, guid: 12e91dc1b1f9ba14b9e3390be7ee8539,
     type: 3}
-  terribleWeatherPrefab: {fileID: 0}
+  terribleWeatherPrefab: {fileID: 6685131134832443804, guid: b6df254fd274a1347902a506484753dd,
+    type: 3}
