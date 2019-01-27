@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndSequence : MonoBehaviour
 {
@@ -43,9 +44,17 @@ public class EndSequence : MonoBehaviour
             if(Vector3.Distance(Camera.main.transform.position, newPos) <= 1f)
             {
                 SessionManager.singleton.PlayGem(5);
-                whiteScreen.CrossFadeAlpha(1, fadeOutTime, false);
+                whiteScreen.CrossFadeAlpha(1, fadeOutTime + 2, false);
                 startEndCameraPan = false;
+                StartCoroutine("ReloadGame");
             }
         }
+    }
+
+    IEnumerator ReloadGame()
+    {
+        yield return new WaitForSeconds(8);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 }

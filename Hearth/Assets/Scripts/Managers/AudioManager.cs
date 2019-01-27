@@ -20,6 +20,9 @@ public class AudioManager : MonoBehaviour
     public GameObject gemDPrefab;
     public GameObject gemSequencePrefab;
     public GameObject terribleWeatherPrefab;
+    public GameObject deathPrefab;
+    public GameObject placeGemPrefab;
+    public GameObject feedFlameLightPrefab;
 
     private GameObject terribleWeatherInstance;
 

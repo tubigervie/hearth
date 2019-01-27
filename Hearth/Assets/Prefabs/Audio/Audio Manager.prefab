@@ -63,3 +63,9 @@ MonoBehaviour:
     type: 3}
   terribleWeatherPrefab: {fileID: 6685131134832443804, guid: b6df254fd274a1347902a506484753dd,
     type: 3}
+  deathPrefab: {fileID: 2950223745725599794, guid: 9316922a428046b4bae126ff748d7303,
+    type: 3}
+  placeGemPrefab: {fileID: 7657071982920819921, guid: 3f9331492585c9e48b880ba604611da2,
+    type: 3}
+  feedFlameLightPrefab: {fileID: 691730197373477572, guid: 29d649abe3ecaa04cba858fc00207982,
+    type: 3}
