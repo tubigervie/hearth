@@ -1260,6 +1260,11 @@ PrefabInstance:
       propertyPath: torch
       value: 
       objectReference: {fileID: 523965808}
+    - target: {fileID: 4722184934926833343, guid: da74e0678f524814ca86201345c2a7ba,
+        type: 3}
+      propertyPath: Sesh
+      value: 
+      objectReference: {fileID: 1799857395}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da74e0678f524814ca86201345c2a7ba, type: 3}
 --- !u!1 &1283184659
@@ -1640,6 +1645,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1307927982}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1799857395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 962020743887858855, guid: acc60da728f5ff749858311134799083,
+    type: 3}
+  m_PrefabInstance: {fileID: 97854290}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17223171e65d1174fa0d055cb19965c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1806306485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3011176127585783304, guid: 1f8313768dd057945a0980ccd8c53b91,
