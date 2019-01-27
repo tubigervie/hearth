@@ -7,15 +7,20 @@ public class Torch : MonoBehaviour
 {
     public float maxDuration; 
     public float litTimeRemaining;
+
+    /// <summary>
+    /// If 0, litTimeRemaining is set to MaxDuration
+    /// </summary>
+    public float timeGainedOnFuelAddition = 0f;  
+
     public bool lit; 
 
     public UnityEvent onLit; 
 
 
-    [SerializeField]
-    ParticleSystem fireParticleSystem;
-    [SerializeField]
-    Light torchLight;
+    [Header("Set Up")]
+    public ParticleSystem fireParticleSystem;
+    public Light torchLight;
 
     Animator animator;
     
@@ -28,7 +33,7 @@ public class Torch : MonoBehaviour
     {
         if(_lit)
         {
-            litTimeRemaining = maxDuration;
+            litTimeRemaining += timeGainedOnFuelAddition  == 0 ? maxDuration - litTimeRemaining : timeGainedOnFuelAddition;
             torchLight.enabled = true;
             fireParticleSystem.Play();
         }
