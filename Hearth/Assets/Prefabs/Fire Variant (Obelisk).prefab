@@ -17,6 +17,29 @@ MonoBehaviour:
   minParticleRate: 15
   maxParticleRate: 150
   strengthPercentage: 0
+--- !u!114 &4831367282786973712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6517401712882821704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8499e802f3baf484880c2d058efe721b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDuration: 10
+  litTimeRemaining: 0
+  timeGainedOnFuelAddition: 0
+  lit: 0
+  onLit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  fireParticleSystem: {fileID: 91104667777058612}
+  torchLight: {fileID: 5030390150974375029}
 --- !u!1001 &8244122519759590888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27,7 +50,7 @@ PrefabInstance:
     - target: {fileID: 2890035060775763872, guid: df035e1a45649db489ff3393c7dbf6b6,
         type: 3}
       propertyPath: m_Name
-      value: Fire Variant (Obelisk)
+      value: Obelisk Fire
       objectReference: {fileID: 0}
     - target: {fileID: 7830113876813090362, guid: df035e1a45649db489ff3393c7dbf6b6,
         type: 3}
@@ -134,18 +157,7 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 2890035060775763873, guid: df035e1a45649db489ff3393c7dbf6b6,
-        type: 3}
-      propertyPath: fireParticleSystem
-      value: 
-      objectReference: {fileID: 91104667777058612}
-    - target: {fileID: 2890035060775763873, guid: df035e1a45649db489ff3393c7dbf6b6,
-        type: 3}
-      propertyPath: torchLight
-      value: 
-      objectReference: {fileID: 5030390150974375029}
-    m_RemovedComponents:
-    - {fileID: 6145187024526593605, guid: df035e1a45649db489ff3393c7dbf6b6, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df035e1a45649db489ff3393c7dbf6b6, type: 3}
 --- !u!1 &6517401712882821704 stripped
 GameObject:
