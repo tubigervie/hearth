@@ -37,7 +37,6 @@ public class Torch : MonoBehaviour
             litTimeRemaining += timeGainedOnFuelAddition  == 0 ? maxDuration - litTimeRemaining : timeGainedOnFuelAddition;
             torchLight.enabled = true;
             fireParticleSystem.Play();
-            PlayLightTorchSound();
         }
         else
         {
@@ -68,12 +67,5 @@ public class Torch : MonoBehaviour
 
         var emission = fireParticleSystem.emission;
         emission.rateOverTime = minParticleRate + (maxParticleRate - minParticleRate) * (litTimeRemaining / maxDuration);
-    }
-
-    private void PlayLightTorchSound()
-    {
-        AudioManager audioMgr = AudioManager.Get();
-        GameObject soundInstance = GameObject.Instantiate(audioMgr.feedFlamePrefab, audioMgr.transform);
-        GameObject.Destroy(soundInstance, 10.0f);
     }
 }

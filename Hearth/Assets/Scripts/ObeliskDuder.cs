@@ -71,6 +71,7 @@ public class ObeliskDuder : MonoBehaviour
             Debug.Log(timer);
             firstWoodEntered = true;
             timer = Mathf.Clamp(timer, 0, 180);
+            PlayLightTorchSound();
         }
         SessionManager.singleton.woodCount = 0;
         for (int x = 0; x < SessionManager.singleton.gemCount; ++x)
@@ -90,7 +91,11 @@ public class ObeliskDuder : MonoBehaviour
             gemArray[i].SetActive(true);
         }
     }
-
-
-
+    
+    private void PlayLightTorchSound()
+    {
+        AudioManager audioMgr = AudioManager.Get();
+        GameObject soundInstance = GameObject.Instantiate(audioMgr.feedFlamePrefab, audioMgr.transform);
+        GameObject.Destroy(soundInstance, 10.0f);
+    }
 }
