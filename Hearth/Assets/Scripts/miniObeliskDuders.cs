@@ -28,7 +28,7 @@ public class miniObeliskDuders : MonoBehaviour
 		{
 			obelisk.torch.litTimeRemaining += obelisk.torch.timeGainedOnFuelAddition  == 0 ? obelisk.torch.maxDuration - obelisk.torch.litTimeRemaining : obelisk.torch.timeGainedOnFuelAddition;
 		}
-        float woodAmount = obelisk.Sesh.woodCount;
+        float woodAmount = SessionManager.singleton.woodCount;
         if(woodAmount != 0)
         {
             //Debug.Log(timer);
@@ -36,7 +36,7 @@ public class miniObeliskDuders : MonoBehaviour
             //Debug.Log(timer);
             obelisk.timer = Mathf.Clamp(obelisk.timer, 0, obelisk.maxTime); 
         }
-        obelisk.Sesh.woodCount = 0;
+        SessionManager.singleton.woodCount = 0;
         
     }
 }

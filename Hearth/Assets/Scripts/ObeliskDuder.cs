@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObeliskDuder : MonoBehaviour
 {
     public static ObeliskDuder singleton;
-    public SessionManager Sesh;
+    SessionManager Sesh;
     public float timer;
     public float maxTime = 180f;
     public float woodTime = 30f;
