@@ -25,7 +25,7 @@ public class ObeliskDuder : MonoBehaviour
         {
             gemArray[i].SetActive(true);
         }
-        timer = maxTime / 3;
+        timer = maxTime / 1.5f;
         Sesh.obelisks.Add(this);
         obFire = GetComponentInChildren<ObeliskFire>();
         obFire.isOn = true;
