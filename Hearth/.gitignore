@@ -1,5 +1,5 @@
 # FMOD
-Assets/FMODStudioCache.asset
+Assets/FMODStudioCache.asset*
 Assets/StreamingAssets/*.bank*
-fmod.log
-fmod_editor.log
+fmod.log*
+fmod_editor.log*
