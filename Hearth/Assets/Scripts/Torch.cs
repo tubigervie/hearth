@@ -17,6 +17,13 @@ public class Torch : MonoBehaviour
     [SerializeField]
     Light torchLight;
 
+    Animator animator;
+    
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>(); 
+    }
     public void setLit(bool _lit = true)
     {
         if(_lit)
@@ -34,13 +41,17 @@ public class Torch : MonoBehaviour
         lit = _lit;
         onLit.Invoke();
     }
+
     // Update is called once per frame
     void Update()
     {
         if(lit)
         {
             if (litTimeRemaining > 0) litTimeRemaining -= Time.deltaTime; 
-            else setLit(false);  
+            else setLit(false);
+
+            animator.SetBool("QuarterTimeLeft", litTimeRemaining < maxDuration / 4);
+            animator.SetBool("Lit", lit); 
         }
-    }
+    }   
 }
