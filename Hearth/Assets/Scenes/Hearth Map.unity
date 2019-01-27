@@ -323,6 +323,7 @@ MonoBehaviour:
   isRespawnable: 0
   count: 30
   model: {fileID: 0}
+  itemCollider: {fileID: 0}
 --- !u!65 &65560676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1738,6 +1739,7 @@ MonoBehaviour:
   isRespawnable: 0
   count: 30
   model: {fileID: 0}
+  itemCollider: {fileID: 0}
 --- !u!65 &276071691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1911,7 +1913,7 @@ PrefabInstance:
     - target: {fileID: 6377082362469778388, guid: 092997d3248208e438b8dd062179b50e,
         type: 3}
       propertyPath: m_Name
-      value: Stick (1)
+      value: First Stick
       objectReference: {fileID: 0}
     - target: {fileID: 6377082362469778391, guid: 092997d3248208e438b8dd062179b50e,
         type: 3}
@@ -1968,6 +1970,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6377082362469778389, guid: 092997d3248208e438b8dd062179b50e,
+        type: 3}
+      propertyPath: isRespawnable
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 092997d3248208e438b8dd062179b50e, type: 3}
 --- !u!1 &309587191
@@ -2020,6 +2027,7 @@ MonoBehaviour:
   isRespawnable: 0
   count: 30
   model: {fileID: 0}
+  itemCollider: {fileID: 0}
 --- !u!65 &309587194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7022,6 +7030,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6377082362469778389, guid: 092997d3248208e438b8dd062179b50e,
+        type: 3}
+      propertyPath: isRespawnable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 092997d3248208e438b8dd062179b50e, type: 3}
 --- !u!1 &1215085072
@@ -8069,6 +8082,7 @@ MonoBehaviour:
   isRespawnable: 0
   count: 30
   model: {fileID: 0}
+  itemCollider: {fileID: 0}
 --- !u!65 &1498646662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9067,6 +9081,7 @@ MonoBehaviour:
   isRespawnable: 0
   count: 30
   model: {fileID: 0}
+  itemCollider: {fileID: 0}
 --- !u!65 &1753758662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9503,6 +9518,7 @@ MonoBehaviour:
   isRespawnable: 0
   count: 30
   model: {fileID: 0}
+  itemCollider: {fileID: 0}
 --- !u!65 &1844014155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10228,6 +10244,7 @@ MonoBehaviour:
   isRespawnable: 0
   count: 30
   model: {fileID: 0}
+  itemCollider: {fileID: 0}
 --- !u!1 &1980376891
 GameObject:
   m_ObjectHideFlags: 0
@@ -10424,6 +10441,7 @@ MonoBehaviour:
   isRespawnable: 0
   count: 30
   model: {fileID: 0}
+  itemCollider: {fileID: 0}
 --- !u!65 &1999193185
 BoxCollider:
   m_ObjectHideFlags: 0

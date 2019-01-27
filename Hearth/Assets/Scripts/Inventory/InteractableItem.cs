@@ -9,7 +9,7 @@ public class InteractableItem : MonoBehaviour
     bool startCount;
     public float count = 30;
     [SerializeField] GameObject model;
-    BoxCollider itemCollider;
+    [SerializeField] BoxCollider itemCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,8 @@ public class InteractableItem : MonoBehaviour
             if(count <= 0)
             {
                 count = 30;
-                gameObject.SetActive(true);
+                itemCollider.enabled = true;
+                model.SetActive(true);
                 startCount = false;
             }
         }
@@ -37,7 +38,8 @@ public class InteractableItem : MonoBehaviour
         SessionManager.singleton.AddItem(itemName);
         if(isRespawnable && gameObject.activeSelf)
         {
-            gameObject.SetActive(false);
+            itemCollider.enabled = false;
+            model.SetActive(false);
             startCount = true;
         }
         else

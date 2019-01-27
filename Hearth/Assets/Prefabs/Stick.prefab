@@ -136,6 +136,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Stick
+  isRespawnable: 1
+  count: 30
+  model: {fileID: 6377082362605955581}
+  itemCollider: {fileID: 6377082362469778390}
 --- !u!1 &6377082362605955581
 GameObject:
   m_ObjectHideFlags: 0
