@@ -918,7 +918,7 @@ PrefabInstance:
     - target: {fileID: 2016175013551930620, guid: da74e0678f524814ca86201345c2a7ba,
         type: 3}
       propertyPath: minLightRange
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2016175013551930620, guid: da74e0678f524814ca86201345c2a7ba,
         type: 3}
